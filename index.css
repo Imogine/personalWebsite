@@ -1,71 +1,49 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:200,300,400,600');
-
-
 body {
-font-family: "Raleway";
-font-weight: 300;
-min-height: 100%;
-overflow: hidden;
+    font-family: "Raleway";
+    font-weight: 300;
+    min-height: 100%;
+    margin: 0px;
 }
-
-a {
-
-}
-
 h1 {
     font-weight: 200;
     font-size: 9em;
     margin: 2%;
 }
-
-h2 {
-
-}
-
-h3 {
-
-}
-
-img {
-
-}
-
 #top {
     margin: 0;
     width: 100%;
+    height: 30px;
 }
-
 #page {
-	text-align: center;
+    text-align: center;
     margin: 0 auto;
     width: 75%;
-    display: flex;
-    flex-flow: column nowrap;
-
 }
 
-#land {
-	width: 100%;
-	margin: 0 auto;
-	margin-top: 20vh;
-	margin-bottom: 100vh;
-
+#land h1 {
+    width: 100%;
+    height: 100vh;
+    top: 25%;
+    left: 0;
+    position: absolute;
 }
-
-#land img{
-	width: 15vw;
-	transform: rotate(90deg);
-
+#land img {
+    width: 15vw;
+    transform: rotate(90deg);
 }
-
 .nav {
+    text-align: center;
+    background-color: #FFF;
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    margin-left: -25%;
     border: 2px solid black;
-    margin: 0 auto;
     line-height: 3em;
     border-radius: 10px;
-
 }
-
 .nav a {
     text-decoration: none;
     color: #000;
@@ -73,24 +51,103 @@ img {
     font-weight: 500;
     margin: 5%;
 }
-
 .nav a:hover {
-	color: #E0003C;
-	text-decoration: underline;
+    color: #E0003C;
+    text-decoration: underline;
 }
+.scrolldown {
+    top: 0vh;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid black;
+    border-radius: 0;
+    background-color: #fff;
+    animation-direction: normal;
+    animation: navChange .25s linear 1;
+    margin-left: -50%;
+    z-index: 9999;
+}
+.scrollup {
+    text-align: center;
+    background-color: #FFF;
+    position: absolute;
+    width: 50%;
+    left: 50%;
+    margin-left: -25%;
+    border: 2px solid black;
+    line-height: 3em;
+    border-radius: 10px;
+    animation-direction: normal;
+    z-index: 9999;
+    animation: navChangeBack .25s linear 1;
+}
+
+@keyframes navChange {
+    0% {
+        border: 2px solid black;
+        border-radius: 10px;
+        position: fixed;
+        width: 50%;
+        left: 50%;
+        margin-left: -25%;
+        border: 2px solid black;
+    }
+    100% {
+        border: 2px solid rgba(0, 0, 0, 0);
+        border-bottom: 2px solid black;
+        border-radius: 0;
+        position: fixed;
+        top: 0%;
+        width: 100%;
+        margin-left: -50%;
+    }
+}
+@keyframes navChangeBack {
+    0% {
+        border: 2px solid rgba(0, 0, 0, 0);
+        border-bottom: 2px solid black;
+        border-radius: 0;
+        width: 100%;
+        margin-left: -50%;
+    }
+    100% {
+        border: 2px solid black;
+        border-radius: 10px;
+        width: 50%;
+        left: 50%;
+        margin-left: -25%;
+        border: 2px solid black;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .nav.pagenav {
+        display: none;
+    }
+    #Nav {
+        display: none;
+    }
+}
+
+/*End Navigation*/
+
+
 /*Start Modal*/
 
 /*Modal (background)*/
 .modal {
-	display: none;
-	position: fixed;
-	z-index: 1;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	overflow: auto;
-	background-color: rgb(0,0,0); 
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0,0.4); 
 }
 
@@ -123,64 +180,81 @@ img {
 
 
 #top {
-	z-index: 2;
-	background-color: #FFF;
-	height: 30px;
-}
-.pagenav {
-	border: none;
-	border-radius: 0;
-	border-bottom: 2px solid black;
-	top: 0;
-	width: 99%;
-	text-align: center;
-
+    z-index: 2;
+    background-color: #FFF;
+    height: 30px;
 }
 
 
 .subSec {
-	padding-top: 50px;
-	margin: 0 auto;
-    margin-top: 20vh;
-    margin-bottom: 100vh;
+    padding-top: 50vh;
     width: 100%;
 }
 
-#art {
-    flex-flow: row wrap;
+/*Art Gallery*/
+
+#gallery {
+     margin-top: 50vh;
+}
+#artl {
+    width: 40%;
+  padding: .5vw;
+  font-size: 0;
+  display: -ms-flexbox;
+  -ms-flex-wrap: wrap;
+  -ms-flex-direction: column;
+  -webkit-flex-flow: row wrap; 
+  flex-flow: row wrap; 
+  display: -webkit-box;
+  display: flex;
+}
+
+#artl .pic {
+  -webkit-box-flex: auto;
+  -ms-flex: auto;
+  flex: auto; 
+  width: 90px; 
+  margin: .5vw; 
+ }
+
+.pic img {
+border-radius: 5px;
+  width: 100%; 
+  height: auto; 
+      -webkit-transition: -webkit-transform .5s; /* For Safari 3.1 to 6.0 */
+    transition: transform .5s;
+}
+
+.pic img:hover {
+    transform: scale(1.5);
 
 }
 
-.pic {
-	display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-}
+#artr {
+    width: 50%;
+    padding: .5vw;
+      display: -ms-flexbox;
+  -ms-flex-wrap: wrap;
+  -ms-flex-direction: column;
+  -webkit-flex-flow: row wrap; 
+  flex-flow: row wrap; 
+  display: -webkit-box;
+  display: flex;
 
-.pic .img {
-	display: flex;
-    margin: 1%;
-    min-width: 275px;
-    min-height: 275px;
-    border-radius: 50%;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
-
 
 #design {
     flex-flow: row wrap;
 }
 
 .mock {
-	display: flex;
+    display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
 }
 
 .mock .img {
-	display: flex;
+    display: flex;
     margin: 3.5%;
     width: 500px;
     height: 275px;
@@ -193,7 +267,7 @@ img {
 
 #contact h1 a{
     font-size: 10vh;
-	text-decoration: none;
+    text-decoration: none;
     color: #000;
     font-weight: 500;
     margin: 5%;
@@ -201,40 +275,33 @@ img {
 }
 
 #contact h1 a:hover {
-	color: #E0003C;
-	text-decoration: underline;
+    color: #E0003C;
+    text-decoration: underline;
 }
 
 
 
 @media only screen and (max-width: 915px) {
-	.nav a {
-	    margin: 1.5%;
-	}
-	#land img {
+    .nav a {
+        margin: 1.5%;
+    }
+    #land img {
     width: 25vw;
-	}
+    }
 }
 
 
 @media only screen and (max-width: 500px) {
 
-	.nav {
-		display: none;
-	}
-	#land img {
+    .nav {
+        display: none;
+    }
+    #land img {
     width: 60vw;
-	}
+    }
 
-	h1 {
+    h1 {
     font-size: 18vw;
 }
 
-}
-
-.img.active {
-    width: 100%;
-    height: 75vh;
-    border-radius: 0px;
-    background-size: contain;
 }

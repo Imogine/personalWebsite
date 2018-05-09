@@ -1,88 +1,56 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <link rel="stylesheet" type="text/css" href="index.css">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
-
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <meta content="width=device-width, height=device-height, initial-scale=1" name="viewport">
     <title>Imogine</title>
 </head>
-
 <body>
-    <div id="top">&nbsp;</div>
+    <div class="nav" id="Nav">
+        <a href="#top">Home</a> <a href="#art">Art</a> <a href="#code">Code</a> <a href="#design">Design</a> <a href="#contact">Contact</a>
+    </div>
+    <div id="top"></div>
     <div id="page">
         <div id="land">
-            <img src="logo.png" alt="abstract line-art of a lantana flower">
-            <br>
+            <img alt="abstract line-art of a lantana flower" src="logo.png"><br>
             <h1>Imogine</h1>
-            <div class="nav">
-                <a href="#art">Art</a>
-                <a href="#code">Code</a>
-                <a href="#design">Design</a>
-                <a href="#contact">Contact</a>
-            </div>
-
-            <div id="conModal" class="modal">
+            <div class="modal" id="conModal">
                 <div class="modContent">
                     <span class="close">&times;</span>
                     <p>Thank you for visiting my Website - please note it is currently under heavy construction</p>
                 </div>
             </div>
         </div>
-        <div id="art" class="subSec">
-			<div class="pagenav nav">
-				<a href="#top">Home</a>
-                <a href="#art">Art</a>
-                <a href="#code">Code</a>
-                <a href="#design">Design</a>
-                <a href="#contact">Contact</a>
+        <div class="subSec" id="gallery">
+            <h1> Gallery </h1>
+            <div class="art" id="artl">
+                <div class="pic"><img src="art/hh1.jpg"></div>
+                <div class="pic"><img src="art/milosz.jpg"></div>
+                <div class="pic"><img src="art/bruce.png"></div>
+                <div class="pic"><img src="art/dog.png"></div>
+                <div class="pic"><img src="art/hh2.png"></div>
+                <div class="pic"><img src="art/willow.png"></div>
             </div>
-            <div class="pic">
-                <div class="img" style="background-image:url('art/hh1.jpg');"></div>
-                <div class="img" style="background-image:url('art/milosz.jpg');"></div>
-                <div class="img" style="background-image:url('art/bruce.png');"></div>
-                <div class="img" style="background-image:url('art/dog.png');"></div>
-                <div class="img" style="background-image:url('art/hh2.png');"></div>
-                <div class="img" style="background-image:url('art/willow.png');"></div>
-            </div>
+            <div class="art" id="artr">
+                <img src="art/willow.png">
         </div>
-        <div id="code" class="subSec">
-        	            <div class="pagenav nav">
-        	            	<a href="#top">Home</a>
-                <a href="#art">Art</a>
-                <a href="#code">Code</a>
-                <a href="#design">Design</a>
-                <a href="#contact">Contact</a>
-            </div>
+        <div class="subSec" id="code">
             <div>
-                <h1> Coming Soon </h1> <br> <a href="https://github.com/imogine"><img src="art/252312.png" alt="Hot Pink Github Logo"></a>
+                <h1>Coming Soon</h1><br>
+                <a href="https://github.com/imogine"><img alt="Hot Pink Github Logo" src="art/252312.png"></a>
             </div>
         </div>
-        <div id="design" class="subSec">
-        	            <div class="pagenav nav">
-        	            	                <a href="#top">Home</a>
-                <a href="#art">Art</a>
-                <a href="#code">Code</a>
-                <a href="#design">Design</a>
-                <a href="#contact">Contact</a>
-            </div>
+        <div class="subSec" id="design">
             <div class="mock">
                 <div class="img" style="background-image:url('art/driveinmockup.png');"></div>
                 <div class="img" style="background-image:url('art/wp.png');"></div>
             </div>
         </div>
-        <div id="contact" class="subSec">
-        	            <div class="pagenav nav">
-        	            	<a href="#top">Home</a>
-                <a href="#art">Art</a>
-                <a href="#code">Code</a>
-                <a href="#design">Design</a>
-                <a href="#contact">Contact</a>
-            </div>
+        <div class="subSec" id="contact">
             <h1><a href="mailto:hello@imogine.tech">E-Mail Me</a></h1>
         </div>
+        <script src="index.js" type="text/javascript">
+        </script> 
     </div>
-    <script type="text/javascript" src="index.js"></script>
 </body>
-
 </html>
