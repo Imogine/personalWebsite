@@ -7,7 +7,7 @@
 </head>
 <body>
     <div class="nav" id="Nav">
-        <a href="#top">Home</a> <a href="#art">Art</a> <a href="#code">Code</a> <a href="#design">Design</a> <a href="#contact">Contact</a>
+        <a href="#top">Home</a> <a href="#gallery">Art</a> <a href="#code">Code</a> <a href="#design">Design</a> <a href="#contact">Contact</a>
     </div>
     <div id="top"></div>
     <div id="page">
@@ -24,30 +24,36 @@
         <div class="subSec" id="gallery">
             <h1> Gallery </h1>
             <div class="art" id="artl">
-                <div class="pic"><img src="art/hh1.jpg"></div>
-                <div class="pic"><img src="art/milosz.jpg"></div>
-                <div class="pic"><img src="art/bruce.png"></div>
-                <div class="pic"><img src="art/dog.png"></div>
-                <div class="pic"><img src="art/hh2.png"></div>
-                <div class="pic"><img src="art/willow.png"></div>
+                <div class="pic"><img onclick="image(0);" src="art/hh1.jpg" alt="Pencil and Ink portrait of a stern faced woman with her hair in a Front Bun"></div>
+                <div class="pic"><img onclick="image(1);" src="art/milosz.jpg" alt="Pen and Ink drawing of a cat in a Military costume"></div>
+                <div class="pic"><img onclick="image(2);" src="art/bruce.png" alt="Digital drawing of a black and white spotted dog floating in a half-curled pose with a halo behind his head"></div>
+                <div class="pic"><img onclick="image(3);" src="art/dog.png" alt="Gouache and Ink Portrait of a red dog panting with ears half perked and blank eyes"></div>
+                <div class="pic"><img onclick="image(4);" src="art/hh2.png" alt="Pencil and Pen portrait of an older man with a large balding forhead and small white eyes"></div>
+                <div class="pic"><img onclick="image(5);" src="art/willow.png" alt="Gouache profile of a Malinois dog with mouth wide open, panting, and white eyes "></div>
             </div>
             <div class="art" id="artr">
-                <img src="art/willow.png">
+                <div class="display"></div>
+            </div>
         </div>
         <div class="subSec" id="code">
             <div>
-                <h1>Coming Soon</h1><br>
-                <a href="https://github.com/imogine"><img alt="Hot Pink Github Logo" src="art/252312.png"></a>
+                <h1>Code</h1><br>
+                <a href="https://github.com/imogine" target="_blank"><img alt="Hot Pink Github Logo" src="art/github.png"></a>
+                <a href="https://codepen.io/imogine" target="_blank"><img alt="Hot Pink Codepen Logo" src="art/codepen.png"></a>
             </div>
         </div>
         <div class="subSec" id="design">
-            <div class="mock">
-                <div class="img" style="background-image:url('art/driveinmockup.png');"></div>
-                <div class="img" style="background-image:url('art/wp.png');"></div>
+            <h1>Website Designs</h1><br>
+            <div id="mock">
+                <div class="img"><img onclick="mimage(0);" src="art/driveinmockup.png" alt="Website Layout utilizing a drive-in theater marquee sign"></div>
+                <div class="img"><img onclick="mimage(1);" src="art/wp.png" alt="Website Layout for a dog breeder"></div>
+            </div>
+            <div id="mDisp">
             </div>
         </div>
         <div class="subSec" id="contact">
-            <h1><a href="mailto:hello@imogine.tech">E-Mail Me</a></h1>
+            <h1><a href="mailto:hello@imogine.tech" target="_blank">E-Mail Me</a></h1>
+            <h1><a href="https://www.linkedin.com/in/imogine" target="_blank">LinkdIn</a></h1>
         </div>
         <script src="index.js" type="text/javascript">
         </script> 
